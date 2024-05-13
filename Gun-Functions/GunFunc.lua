@@ -116,7 +116,7 @@ function createBlast()
 		end
 	end)
 	
-	Text.Text = tostring(currentAmmo) .. "/" .. tostring(maxAmmo)
+	Text.Text = tostring(currentAmmo) .. "/" .. tostring(maxAmmo) --can be removed this is just for text but maxammo is already set a math.huge.
 end
 
 local setTrue = false
@@ -140,7 +140,7 @@ local blastCooldown = 0.001
 game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessed)
 	if input.UserInputType == Enum.UserInputType.MouseButton1 and not gameProcessed then
 		if setTrue == true then
-			--wait(inputCd)
+			--wait(inputCd) i forgot what this was for maybe like a cooldown after not shooting for a while
 			mouseButton1Down = true
 			while mouseButton1Down do
 				createBlast()
@@ -148,7 +148,7 @@ game:GetService("UserInputService").InputBegan:Connect(function(input, gameProce
 			end
 		end
 	end
-end)
+end)-- you should definetly make this way better for working an automactic like make it shoot #bullets while holding down input instead of a loop foreach individual shot.
 
 game:GetService("UserInputService").InputEnded:Connect(function(input)
 	if input.UserInputType == Enum.UserInputType.MouseButton1 then
