@@ -1,2 +1,1 @@
-# Roblox-Studio-shit
-Shit for rbx studio
+you can steal/reference the code idrc
