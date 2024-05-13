@@ -137,10 +137,11 @@ while true do
 			local elapsedTime = tick() - startTime
 			local t = elapsedTime / lerpingTime
 			currentOffset = lerp(currentOffset, targetOffset, t)
-			updateAutoCFrame() -- Update CFrame during lerping
+			updateAutoCFrame()
 			RunService.RenderStepped:Wait()
 		end
 		isLerping = false
 	end
-	RunService.Heartbeat:Wait() -- Use Heartbeat for more precise timing
+	RunService.Heartbeat:Wait()
 end
+-- this took alot of time for optimization and other stuff lol i won't explain the code just ask ai or use common knowledge.
